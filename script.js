@@ -3,33 +3,37 @@ const nav = document.getElementById("nav");
 const form = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
+// Мобільне меню
 if (burger && nav) {
   burger.addEventListener("click", () => {
     nav.classList.toggle("is-open");
   });
-
-  nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-    });
-  });
 }
 
+// Обробка форми
 if (form) {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    const data = new FormData(event.target);
+    formMessage.textContent = "Надсилаємо вашу заявку...";
 
-    const formData = new FormData(form);
-    const name = String(formData.get("name") || "").trim();
-    const phone = String(formData.get("phone") || "").trim();
-    const message = String(formData.get("message") || "").trim();
+    try {
+      const response = await fetch(event.target.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (!name || !phone || !message) {
-      formMessage.textContent = "Будь ласка, заповніть усі поля.";
-      return;
+      if (response.ok) {
+        formMessage.style.color = "green";
+        formMessage.textContent = "Дякуємо! Заявка надіслана на granit.ai.store@gmail.com.";
+        form.reset();
+      } else {
+        throw new Error();
+      }
+    } catch (error) {
+      formMessage.style.color = "red";
+      formMessage.textContent = "Помилка відправки. Спробуйте ще раз.";
     }
-
-    formMessage.textContent = "Дякуємо! Ваша заявка готова до інтеграції з Telegram, email або CRM.";
-    form.reset();
   });
 }
