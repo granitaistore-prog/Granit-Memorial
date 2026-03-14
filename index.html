@@ -1,274 +1,81 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Granit Memorial — Гранітні пам'ятники</title>
-    <meta
-      name="description"
-      content="Виготовлення гранітних пам'ятників, меморіальних комплексів, гравіювання, доставка та встановлення по Україні."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granit Memorial — Пам'ятники з граніту</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <header class="header">
-      <div class="container header__inner">
-        <a href="#hero" class="logo">
-          <span class="logo__title">GRANIT MEMORIAL</span>
-          <span class="logo__subtitle">Гранітні пам'ятники під замовлення</span>
-        </a>
-
-        <button class="burger" id="burger" aria-label="Відкрити меню">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="nav" id="nav">
-          <a href="#catalog">Каталог</a>
-          <a href="#services">Послуги</a>
-          <a href="#about">Про нас</a>
-          <a href="#contacts">Контакти</a>
-          <a href="#contacts" class="btn btn--dark nav__cta">Замовити консультацію</a>
-        </nav>
-      </div>
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <span class="logo__title">GRANIT MEMORIAL</span>
+            </a>
+            <button class="burger" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav" id="nav">
+                <a href="#catalog">Каталог</a>
+                <a href="#services">Послуги</a>
+                <a href="#contacts">Контакти</a>
+                <a href="#contacts" class="btn btn--dark">Замовити</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-      <section class="hero" id="hero">
-        <div class="hero__overlay"></div>
-        <div class="container hero__content">
-          <div class="hero__text">
-            <div class="hero__badge">Надійні вироби з натурального граніту</div>
-            <h1>Гранітні пам'ятники з виготовленням та встановленням</h1>
-            <p>
-              Одинарні, подвійні пам'ятники та меморіальні комплекси. Підбір дизайну,
-              гравіювання, доставка та монтаж по Україні.
-            </p>
-            <div class="hero__actions">
-              <a href="#catalog" class="btn btn--light">Переглянути каталог</a>
-              <a href="#contacts" class="btn btn--outline">Замовити прорахунок</a>
+        <section class="hero">
+            <div class="hero__overlay"></div>
+            <div class="container hero__content">
+                <h1>Гранітні пам'ятники з виготовленням та встановленням</h1>
+                <p>Надійні вироби з натурального каменю для вшанування пам'яті.</p>
+                <div class="hero__actions">
+                    <a href="#catalog" class="btn btn--light">Каталог</a>
+                    <a href="#contacts" class="btn btn--outline">Консультація</a>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="section">
-        <div class="container grid grid--2-1">
-          <div class="card card--white">
-            <p class="section-label">Переваги</p>
-            <h2>Чому обирають нас</h2>
-            <div class="features">
-              <div class="feature">Власне виготовлення та контроль якості</div>
-              <div class="feature">Граніт різних видів і відтінків</div>
-              <div class="feature">Індивідуальні макети та прорахунок вартості</div>
-              <div class="feature">Гравіювання портретів та написів</div>
-              <div class="feature">Доставка та встановлення</div>
-              <div class="feature">Делікатний супровід замовлення</div>
+        <section class="section" id="catalog">
+            <div class="container">
+                <h2>Популярні моделі</h2>
+                <div class="cards-3">
+                    <article class="product-card">
+                        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=600&q=80" alt="Пам'ятник">
+                        <div class="product-card__body">
+                            <h3>Одинарний пам'ятник</h3>
+                            <p>від 18 000 грн</p>
+                            <a href="#contacts" class="btn btn--dark btn--small">Замовити</a>
+                        </div>
+                    </article>
+                    </div>
             </div>
-          </div>
+        </section>
 
-          <aside class="card card--dark quick-contact">
-            <p class="section-label section-label--light">Швидкий зв'язок</p>
-            <h3>Отримайте попередній розрахунок</h3>
-            <p>
-              Надішліть фото місця встановлення, бажані розміри або приклад дизайну —
-              підготуємо орієнтовну вартість.
-            </p>
-            <ul>
-              <li>📞 +38 (0XX) XXX-XX-XX</li>
-              <li>✉️ info@granitmemorial.ua</li>
-              <li>📍 Коростишів / Україна</li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section" id="catalog">
-        <div class="container">
-          <div class="section-top">
-            <div>
-              <p class="section-label">Каталог</p>
-              <h2>Популярні моделі пам'ятників</h2>
+        <section class="section" id="contacts">
+            <div class="container cards-2">
+                <div class="card card--white">
+                    <h2>Контакти</h2>
+                    <p>📍 Коростишів, Україна</p>
+                    <p>📞 +38 (0XX) XXX-XX-XX</p>
+                    <p>✉️ granit.ai.store@gmail.com</p>
+                </div>
+                <div class="card card--gray">
+                    <h2>Залишити запит</h2>
+                    <form id="contactForm" action="https://formspree.io/f/ВАШ_ID_FORMSPREE" method="POST" class="contact-form">
+                        <input type="text" name="name" placeholder="Ваше ім'я" required>
+                        <input type="tel" name="phone" placeholder="Телефон" required>
+                        <textarea name="message" placeholder="Опишіть замовлення" required></textarea>
+                        <button type="submit" class="btn btn--dark">Надіслати</button>
+                        <p id="formMessage" class="form-note"></p>
+                    </form>
+                </div>
             </div>
-            <p class="section-description">
-              Усі моделі можуть змінюватися за формою, розміром, кольором каменю, типом
-              полірування та декоративними елементами.
-            </p>
-          </div>
-
-          <div class="cards-3">
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80"
-                alt="Одинарний пам'ятник"
-              />
-              <div class="product-card__body">
-                <h3>Одинарний пам'ятник</h3>
-                <p>
-                  Класичний варіант для одного поховання. Доступні прямі та фігурні форми,
-                  гравіювання портрета й написів.
-                </p>
-                <div class="product-card__footer">
-                  <strong>від 18 000 грн</strong>
-                  <a href="#contacts" class="btn btn--dark btn--small">Замовити</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
-                alt="Подвійний пам'ятник"
-              />
-              <div class="product-card__body">
-                <h3>Подвійний пам'ятник</h3>
-                <p>
-                  Рішення для сімейного поховання. Можливе комбінування декількох плит,
-                  підставок, ваз та квітників.
-                </p>
-                <div class="product-card__footer">
-                  <strong>від 32 000 грн</strong>
-                  <a href="#contacts" class="btn btn--dark btn--small">Замовити</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80"
-                alt="Меморіальний комплекс"
-              />
-              <div class="product-card__body">
-                <h3>Меморіальний комплекс</h3>
-                <p>
-                  Індивідуальний дизайн із облицюванням, столиком, лавкою, вазами, огорожею
-                  та іншими елементами.
-                </p>
-                <div class="product-card__footer">
-                  <strong>від 65 000 грн</strong>
-                  <a href="#contacts" class="btn btn--dark btn--small">Замовити</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="services">
-        <div class="container cards-2">
-          <div class="card card--white">
-            <p class="section-label">Послуги</p>
-            <h2>Повний комплекс робіт</h2>
-            <ul class="list">
-              <li>Виготовлення пам'ятників із граніту та габро</li>
-              <li>Лазерне та художнє гравіювання</li>
-              <li>Виготовлення квітників, ваз, столів, лавок, огорож</li>
-              <li>Облицювання плиткою та гранітом</li>
-              <li>Реставрація та демонтаж старих пам'ятників</li>
-            </ul>
-          </div>
-
-          <div class="card card--gray">
-            <p class="section-label">Етапи роботи</p>
-            <h2>Як відбувається замовлення</h2>
-            <div class="steps">
-              <div class="step">
-                <span>01</span>
-                <div>
-                  <h3>Консультація</h3>
-                  <p>Обговорення форми, розмірів, каменю, написів, бюджету та побажань.</p>
-                </div>
-              </div>
-              <div class="step">
-                <span>02</span>
-                <div>
-                  <h3>Макет</h3>
-                  <p>Підготовка ескізу або візуалізації майбутнього виробу для погодження.</p>
-                </div>
-              </div>
-              <div class="step">
-                <span>03</span>
-                <div>
-                  <h3>Виготовлення</h3>
-                  <p>Різка, полірування, гравіювання та підготовка всіх деталей замовлення.</p>
-                </div>
-              </div>
-              <div class="step">
-                <span>04</span>
-                <div>
-                  <h3>Монтаж</h3>
-                  <p>Доставка та професійне встановлення на місці поховання.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="container">
-          <div class="about-box">
-            <p class="section-label section-label--light">Про нас</p>
-            <h2>Пам'ять, втілена в камені</h2>
-            <p>
-              Ми допомагаємо створювати довговічні та естетичні пам'ятники з натурального
-              каменю. Працюємо уважно до деталей, поважаємо ваші побажання та супроводжуємо
-              замовлення від першої консультації до повного монтажу.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="contacts">
-        <div class="container cards-2">
-          <div class="card card--white">
-            <p class="section-label">Контакти</p>
-            <h2>Зв'яжіться з нами</h2>
-            <div class="contacts-list">
-              <div><strong>Телефон:</strong> +38 (0XX) XXX-XX-XX</div>
-              <div><strong>Email:</strong> info@granitmemorial.ua</div>
-              <div><strong>Місто:</strong> Коростишів, Україна</div>
-              <div><strong>Графік:</strong> Пн–Сб, 09:00–18:00</div>
-            </div>
-            <p class="contacts-note">
-              Для швидкого прорахунку надішліть фото місця встановлення та приклад бажаного
-              пам'ятника.
-            </p>
-          </div>
-
-          <div class="card card--gray">
-            <p class="section-label">Форма заявки</p>
-            <h2>Залишити запит</h2>
-            <form class="contact-form" id="contactForm">
-              <input type="text" name="name" placeholder="Ваше ім'я" required />
-              <input type="tel" name="phone" placeholder="Телефон" required />
-              <textarea
-                name="message"
-                placeholder="Опишіть ваше замовлення"
-                required
-              ></textarea>
-              <button type="submit" class="btn btn--dark">Надіслати заявку</button>
-              <p class="form-note" id="formMessage"></p>
-            </form>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer__inner">
-        <p>© 2026 GRANIT MEMORIAL. Всі права захищено.</p>
-        <p>Статичний сайт для GitHub Pages.</p>
-      </div>
-    </footer>
-
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
