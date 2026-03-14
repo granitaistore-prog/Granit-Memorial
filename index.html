@@ -1,266 +1,274 @@
-export default function GranitMonumentsSite() {
-  const monuments = [
-    {
-      title: "Одинарний пам’ятник",
-      image:
-        "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
-      description:
-        "Класичний варіант із чорного граніту для одного поховання. Можливе гравіювання портрета та написів.",
-      price: "від 18 000 грн",
-    },
-    {
-      title: "Подвійний пам’ятник",
-      image:
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-      description:
-        "Надійне рішення для сімейного поховання. Доступні прямі та фігурні форми.",
-      price: "від 32 000 грн",
-    },
-    {
-      title: "Елітний меморіальний комплекс",
-      image:
-        "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80",
-      description:
-        "Індивідуальний дизайн, комбіновані породи каменю, облицювання, вази та огорожа.",
-      price: "від 65 000 грн",
-    },
-  ];
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Granit Memorial — Гранітні пам'ятники</title>
+    <meta
+      name="description"
+      content="Виготовлення гранітних пам'ятників, меморіальних комплексів, гравіювання, доставка та встановлення по Україні."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#hero" class="logo">
+          <span class="logo__title">GRANIT MEMORIAL</span>
+          <span class="logo__subtitle">Гранітні пам'ятники під замовлення</span>
+        </a>
 
-  const advantages = [
-    "Власне виготовлення та контроль якості",
-    "Пам’ятники з граніту різних видів і відтінків",
-    "Безкоштовна консультація та розрахунок вартості",
-    "3D-візуалізація перед замовленням",
-    "Доставка та встановлення по Україні",
-  ];
+        <button class="burger" id="burger" aria-label="Відкрити меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-  const steps = [
-    {
-      title: "Консультація",
-      text: "Обговорюємо форму, розмір, вид граніту, напис, портрет та бюджет.",
-    },
-    {
-      title: "Макет",
-      text: "Готуємо ескіз або 3D-макет майбутнього пам’ятника для погодження.",
-    },
-    {
-      title: "Виготовлення",
-      text: "Виконуємо різку, полірування, гравіювання та підготовку всіх елементів.",
-    },
-    {
-      title: "Монтаж",
-      text: "Доставляємо та професійно встановлюємо готовий виріб на місці.",
-    },
-  ];
+        <nav class="nav" id="nav">
+          <a href="#catalog">Каталог</a>
+          <a href="#services">Послуги</a>
+          <a href="#about">Про нас</a>
+          <a href="#contacts">Контакти</a>
+          <a href="#contacts" class="btn btn--dark nav__cta">Замовити консультацію</a>
+        </nav>
+      </div>
+    </header>
 
-  return (
-    <div className="min-h-screen bg-stone-50 text-stone-900">
-      <header className="sticky top-0 z-50 border-b border-stone-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div>
-            <div className="text-xl font-bold tracking-wide">GRANIT MEMORIAL</div>
-            <div className="text-xs text-stone-500">Виготовлення гранітних пам’ятників</div>
-          </div>
-          <nav className="hidden gap-6 text-sm md:flex">
-            <a href="#catalog" className="transition hover:text-black">Каталог</a>
-            <a href="#services" className="transition hover:text-black">Послуги</a>
-            <a href="#about" className="transition hover:text-black">Про нас</a>
-            <a href="#contacts" className="transition hover:text-black">Контакти</a>
-          </nav>
-        </div>
-      </header>
-
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-900/85 to-stone-800/60" />
-        <img
-          src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80"
-          alt="Гранітний пам’ятник"
-          className="h-[75vh] w-full object-cover"
-        />
-        <div className="absolute inset-0 mx-auto flex max-w-7xl items-center px-6">
-          <div className="max-w-2xl text-white">
-            <div className="mb-4 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur">
-              Якісні гранітні пам’ятники під замовлення
-            </div>
-            <h1 className="text-4xl font-bold leading-tight md:text-6xl">
-              Гранітні пам’ятники з виготовленням та встановленням
-            </h1>
-            <p className="mt-5 max-w-xl text-base text-stone-200 md:text-lg">
-              Створюємо одинарні, подвійні та меморіальні комплекси з натурального граніту.
-              Допоможемо підібрати дизайн, матеріал та оформлення відповідно до ваших побажань.
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+          <div class="hero__text">
+            <div class="hero__badge">Надійні вироби з натурального граніту</div>
+            <h1>Гранітні пам'ятники з виготовленням та встановленням</h1>
+            <p>
+              Одинарні, подвійні пам'ятники та меморіальні комплекси. Підбір дизайну,
+              гравіювання, доставка та монтаж по Україні.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#catalog"
-                className="rounded-2xl bg-white px-6 py-3 text-center font-medium text-stone-900 shadow-lg transition hover:-translate-y-0.5"
-              >
-                Переглянути каталог
-              </a>
-              <a
-                href="#contacts"
-                className="rounded-2xl border border-white/30 bg-white/10 px-6 py-3 text-center font-medium text-white backdrop-blur transition hover:bg-white/20"
-              >
-                Замовити консультацію
-              </a>
+            <div class="hero__actions">
+              <a href="#catalog" class="btn btn--light">Переглянути каталог</a>
+              <a href="#contacts" class="btn btn--outline">Замовити прорахунок</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-6 px-6 py-16 md:grid-cols-5">
-        <div className="rounded-3xl bg-white p-8 shadow-sm md:col-span-3">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-stone-500">Переваги</p>
-          <h2 className="mt-3 text-3xl font-bold">Чому обирають нас</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {advantages.map((item) => (
-              <div key={item} className="rounded-2xl border border-stone-200 p-4">
-                <div className="text-lg font-medium">✓ {item}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="rounded-3xl bg-stone-900 p-8 text-white shadow-sm md:col-span-2">
-          <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Швидкий розрахунок</p>
-          <h3 className="mt-3 text-2xl font-bold">Дізнайтесь вартість вашого замовлення</h3>
-          <p className="mt-4 text-stone-300">
-            Надішліть фото місця, бажаний розмір та приклад дизайну — підготуємо орієнтовний
-            розрахунок.
-          </p>
-          <div className="mt-8 space-y-3 text-sm text-stone-200">
-            <div>📞 Телефон: +38 (0XX) XXX-XX-XX</div>
-            <div>✉️ Email: info@granitmemorial.ua</div>
-            <div>📍 Місто: Коростишів / доставка по Україні</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="catalog" className="mx-auto max-w-7xl px-6 py-8">
-        <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-stone-500">Каталог</p>
-            <h2 className="mt-3 text-3xl font-bold">Популярні моделі пам’ятників</h2>
-          </div>
-          <p className="max-w-2xl text-stone-600">
-            Усі моделі можуть бути змінені за розміром, формою, типом граніту та декоративними
-            елементами.
-          </p>
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-3">
-          {monuments.map((item) => (
-            <div key={item.title} className="overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1">
-              <img src={item.image} alt={item.title} className="h-72 w-full object-cover" />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold">{item.title}</h3>
-                <p className="mt-3 text-stone-600">{item.description}</p>
-                <div className="mt-6 flex items-center justify-between gap-3">
-                  <span className="text-lg font-bold">{item.price}</span>
-                  <a
-                    href="#contacts"
-                    className="rounded-2xl bg-stone-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-black"
-                  >
-                    Замовити
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="services" className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-stone-500">Послуги</p>
-            <h2 className="mt-3 text-3xl font-bold">Повний комплекс робіт</h2>
-            <div className="mt-6 space-y-4 text-stone-700">
-              <p>• Виготовлення пам’ятників з граніту та габро</p>
-              <p>• Художнє та лазерне гравіювання портретів</p>
-              <p>• Облицювання плиткою та гранітом</p>
-              <p>• Виготовлення квітників, ваз, лавок, столів, огорож</p>
-              <p>• Реставрація та демонтаж старих конструкцій</p>
+      <section class="section">
+        <div class="container grid grid--2-1">
+          <div class="card card--white">
+            <p class="section-label">Переваги</p>
+            <h2>Чому обирають нас</h2>
+            <div class="features">
+              <div class="feature">Власне виготовлення та контроль якості</div>
+              <div class="feature">Граніт різних видів і відтінків</div>
+              <div class="feature">Індивідуальні макети та прорахунок вартості</div>
+              <div class="feature">Гравіювання портретів та написів</div>
+              <div class="feature">Доставка та встановлення</div>
+              <div class="feature">Делікатний супровід замовлення</div>
             </div>
           </div>
 
-          <div className="rounded-3xl bg-stone-100 p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-stone-500">Етапи роботи</p>
-            <h2 className="mt-3 text-3xl font-bold">Як відбувається замовлення</h2>
-            <div className="mt-6 grid gap-4">
-              {steps.map((step, index) => (
-                <div key={step.title} className="rounded-2xl bg-white p-5">
-                  <div className="text-sm text-stone-500">0{index + 1}</div>
-                  <div className="mt-1 text-xl font-semibold">{step.title}</div>
-                  <div className="mt-2 text-stone-600">{step.text}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <aside class="card card--dark quick-contact">
+            <p class="section-label section-label--light">Швидкий зв'язок</p>
+            <h3>Отримайте попередній розрахунок</h3>
+            <p>
+              Надішліть фото місця встановлення, бажані розміри або приклад дизайну —
+              підготуємо орієнтовну вартість.
+            </p>
+            <ul>
+              <li>📞 +38 (0XX) XXX-XX-XX</li>
+              <li>✉️ info@granitmemorial.ua</li>
+              <li>📍 Коростишів / Україна</li>
+            </ul>
+          </aside>
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-7xl px-6 py-8">
-        <div className="rounded-[2rem] bg-stone-900 px-8 py-12 text-white md:px-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-stone-400">Про нас</p>
-          <h2 className="mt-3 text-3xl font-bold">Працюємо делікатно, якісно та відповідально</h2>
-          <p className="mt-5 max-w-3xl text-stone-300">
-            Ми спеціалізуємося на виготовленні пам’ятників та меморіальних комплексів із натурального
-            каменю. Допомагаємо клієнтам на всіх етапах: від вибору форми і каменю до остаточного
-            монтажу. Для нас важливо поєднати довговічність виробу, естетичний вигляд та повагу до
-            пам’яті близьких.
-          </p>
-        </div>
-      </section>
-
-      <section id="contacts" className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-stone-500">Контакти</p>
-            <h2 className="mt-3 text-3xl font-bold">Зв’яжіться з нами</h2>
-            <div className="mt-6 space-y-4 text-lg">
-              <div>📞 +38 (0XX) XXX-XX-XX</div>
-              <div>✉️ info@granitmemorial.ua</div>
-              <div>📍 Коростишів, Україна</div>
-              <div>🕒 Пн–Сб: 09:00–18:00</div>
+      <section class="section" id="catalog">
+        <div class="container">
+          <div class="section-top">
+            <div>
+              <p class="section-label">Каталог</p>
+              <h2>Популярні моделі пам'ятників</h2>
             </div>
-            <p className="mt-6 text-stone-600">
-              Для швидкого прорахунку вартості надішліть фото місця встановлення та приклад бажаного
-              пам’ятника.
+            <p class="section-description">
+              Усі моделі можуть змінюватися за формою, розміром, кольором каменю, типом
+              полірування та декоративними елементами.
             </p>
           </div>
 
-          <div className="rounded-3xl bg-stone-100 p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-stone-500">Форма заявки</p>
-            <h3 className="mt-3 text-2xl font-bold">Залишити запит</h3>
-            <form className="mt-6 space-y-4">
-              <input
-                className="w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 outline-none ring-0 transition focus:border-stone-500"
-                placeholder="Ваше ім’я"
+          <div class="cards-3">
+            <article class="product-card">
+              <img
+                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80"
+                alt="Одинарний пам'ятник"
               />
-              <input
-                className="w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 outline-none ring-0 transition focus:border-stone-500"
-                placeholder="Телефон"
+              <div class="product-card__body">
+                <h3>Одинарний пам'ятник</h3>
+                <p>
+                  Класичний варіант для одного поховання. Доступні прямі та фігурні форми,
+                  гравіювання портрета й написів.
+                </p>
+                <div class="product-card__footer">
+                  <strong>від 18 000 грн</strong>
+                  <a href="#contacts" class="btn btn--dark btn--small">Замовити</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+                alt="Подвійний пам'ятник"
               />
+              <div class="product-card__body">
+                <h3>Подвійний пам'ятник</h3>
+                <p>
+                  Рішення для сімейного поховання. Можливе комбінування декількох плит,
+                  підставок, ваз та квітників.
+                </p>
+                <div class="product-card__footer">
+                  <strong>від 32 000 грн</strong>
+                  <a href="#contacts" class="btn btn--dark btn--small">Замовити</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80"
+                alt="Меморіальний комплекс"
+              />
+              <div class="product-card__body">
+                <h3>Меморіальний комплекс</h3>
+                <p>
+                  Індивідуальний дизайн із облицюванням, столиком, лавкою, вазами, огорожею
+                  та іншими елементами.
+                </p>
+                <div class="product-card__footer">
+                  <strong>від 65 000 грн</strong>
+                  <a href="#contacts" class="btn btn--dark btn--small">Замовити</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container cards-2">
+          <div class="card card--white">
+            <p class="section-label">Послуги</p>
+            <h2>Повний комплекс робіт</h2>
+            <ul class="list">
+              <li>Виготовлення пам'ятників із граніту та габро</li>
+              <li>Лазерне та художнє гравіювання</li>
+              <li>Виготовлення квітників, ваз, столів, лавок, огорож</li>
+              <li>Облицювання плиткою та гранітом</li>
+              <li>Реставрація та демонтаж старих пам'ятників</li>
+            </ul>
+          </div>
+
+          <div class="card card--gray">
+            <p class="section-label">Етапи роботи</p>
+            <h2>Як відбувається замовлення</h2>
+            <div class="steps">
+              <div class="step">
+                <span>01</span>
+                <div>
+                  <h3>Консультація</h3>
+                  <p>Обговорення форми, розмірів, каменю, написів, бюджету та побажань.</p>
+                </div>
+              </div>
+              <div class="step">
+                <span>02</span>
+                <div>
+                  <h3>Макет</h3>
+                  <p>Підготовка ескізу або візуалізації майбутнього виробу для погодження.</p>
+                </div>
+              </div>
+              <div class="step">
+                <span>03</span>
+                <div>
+                  <h3>Виготовлення</h3>
+                  <p>Різка, полірування, гравіювання та підготовка всіх деталей замовлення.</p>
+                </div>
+              </div>
+              <div class="step">
+                <span>04</span>
+                <div>
+                  <h3>Монтаж</h3>
+                  <p>Доставка та професійне встановлення на місці поховання.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="about-box">
+            <p class="section-label section-label--light">Про нас</p>
+            <h2>Пам'ять, втілена в камені</h2>
+            <p>
+              Ми допомагаємо створювати довговічні та естетичні пам'ятники з натурального
+              каменю. Працюємо уважно до деталей, поважаємо ваші побажання та супроводжуємо
+              замовлення від першої консультації до повного монтажу.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contacts">
+        <div class="container cards-2">
+          <div class="card card--white">
+            <p class="section-label">Контакти</p>
+            <h2>Зв'яжіться з нами</h2>
+            <div class="contacts-list">
+              <div><strong>Телефон:</strong> +38 (0XX) XXX-XX-XX</div>
+              <div><strong>Email:</strong> info@granitmemorial.ua</div>
+              <div><strong>Місто:</strong> Коростишів, Україна</div>
+              <div><strong>Графік:</strong> Пн–Сб, 09:00–18:00</div>
+            </div>
+            <p class="contacts-note">
+              Для швидкого прорахунку надішліть фото місця встановлення та приклад бажаного
+              пам'ятника.
+            </p>
+          </div>
+
+          <div class="card card--gray">
+            <p class="section-label">Форма заявки</p>
+            <h2>Залишити запит</h2>
+            <form class="contact-form" id="contactForm">
+              <input type="text" name="name" placeholder="Ваше ім'я" required />
+              <input type="tel" name="phone" placeholder="Телефон" required />
               <textarea
-                className="min-h-[140px] w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 outline-none transition focus:border-stone-500"
+                name="message"
                 placeholder="Опишіть ваше замовлення"
-              />
-              <button
-                type="button"
-                className="w-full rounded-2xl bg-stone-900 px-6 py-3 font-medium text-white transition hover:bg-black"
-              >
-                Надіслати заявку
-              </button>
+                required
+              ></textarea>
+              <button type="submit" class="btn btn--dark">Надіслати заявку</button>
+              <p class="form-note" id="formMessage"></p>
             </form>
           </div>
         </div>
       </section>
+    </main>
 
-      <footer className="border-t border-stone-200 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-stone-500 md:flex-row md:items-center md:justify-between">
-          <div>© 2026 GRANIT MEMORIAL. Всі права захищено.</div>
-          <div>Сайт підходить для розміщення на GitHub Pages як статичний проєкт.</div>
-        </div>
-      </footer>
-    </div>
-  );
-}
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© 2026 GRANIT MEMORIAL. Всі права захищено.</p>
+        <p>Статичний сайт для GitHub Pages.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
